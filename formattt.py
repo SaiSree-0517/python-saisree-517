@@ -10,3 +10,12 @@ print("hexa %x"%(a))
 print("hexa %X"%(a))
 print("char %c"%(a))
 print("hexa %o"%(a))
+#output
+Hello CSE-A !How are you?
+Age is 19
+Hello CSE-A !Your Age is 19
+Hello CSE-A !Your Age is 19 and your grade is 8.90
+hexa 41
+hexa 41
+char A
+hexa 101
