@@ -1,11 +1,7 @@
 #set operations
+#union()-->All the elements,returns the union as a new set
 set1={1,2,3,4,5,10,12,13}
 set2={10,11,12,13,14,15,17,19,1}
-s1={1,2,3,4,5,10,12,13}
-s2={10,11,12,13,14,15,17,19,1}
-a={1,2,3,4,5,10,12,13}
-b={10,11,12,13,14,15,17,19,1}
-#union()-->All the elements,returns the union as a new set 
 u=set1.union(set2)
 print("union",u)
 #union and update
@@ -18,16 +14,34 @@ set1.update(set2)
 print("update",set1)
 
 #intersection and intersection_update
+s1={1,2,3,4,5,10,12,13}
+s2={10,11,12,13,14,15,17,19,1}
 inter=s1.intersection(s2)
 print("intersection=",inter)
 s1.intersection_update(s2)
 print("intersection_update=",s1)
 #difference() and difference_update()
+a={1,2,3,4,5,10,12,13}
+b={10,11,12,13,14,15,17,19,1}
 c=b.difference(a)
 print("difference",c)
 b.difference_update(a)
 print("difference_update",b)
-
+#issuperset()
+A = {1, 2, 3, 4, 5}
+B = {1, 2, 3}
+C = {1, 2, 3}
+print("A is superset of B or B is subset of A:",A.issuperset(B))#checks A is superset of B or not and returns True or False 
+print(B.issuperset(A))#checks B is superset of A or not and returns True or False  
+print(C.issuperset(B))#checks C is superset of B or not and returns True or False
+#issubset()
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+C = {1, 2, 4, 5}
+print(A.issubset(B))#Returns True , A is subset of B
+print(B.issubset(A))# Returns False, B is not subset of A
+print(A.issubset(C))#Returns False, A is not subset of A
+print(C.issubset(B))#Returns True , C is subset of B
 #output
 union {1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15, 17, 19}
 update {1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15, 17, 19}
@@ -35,3 +49,11 @@ intersection= {1, 10, 12, 13}
 intersection_update= {1, 10, 12, 13}
 difference {11, 14, 15, 17, 19}
 difference_update {11, 14, 15, 17, 19}
+A is superset of B or B is subset of A: True
+False
+True
+True
+False
+False
+True
+
