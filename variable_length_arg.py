@@ -1,5 +1,6 @@
 #variable length arguments
 """
+It is not known in advance how many arguments will be passed to a function.
 an argument that can accept variable number of values.
 1.To indicate that the function can take variable number
 of argument you write a variable argument using a ‘*’, for example *args.
@@ -10,6 +11,8 @@ helps to make your function more flexible.
 5.Values pass to *args are stored in a tuple.
 6.Before variable args you can have a formal argument but not after a variable args.
 After variable argument you can have keyword arguments.
+Syntax:-def functionname(arg1,arg2,*var_args):
+
 """
 #example1:function to add two numbers
 def add_num(num1, num2):
@@ -50,3 +53,24 @@ def add_n(*args):
 
 result = add_n(5, 6, 7)
 print('Sum is', result)#Sum is 18
+#example 2
+def func(name,*fav_subjects):
+    print(name,"likes to read")
+    for subject in fav_subjects:
+        print(subject)
+func("ravi","science")
+func("reshma","social","physics")
+func("suma")
+"""
+ravi likes to read
+science
+reshma likes to read
+social
+physics
+suma likes to read
+"""
+"""
+1.The arbitrary number of arguments passed to the function forms a tuple before being passed into the function.
+2.Inside the called function, for loop is used to access the arguments.
+3.The variable length arguments if present in the function definition should be last in the list of parameters.
+"""
