@@ -28,6 +28,9 @@ Number of occurrences of CSE=  2
 """
 2.Develop a python code to read the contents of file and find how many upper case letters,
 lower cas letters and digits are existed in the file?
+contents in text.txt:
+AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz  
+1 2 3 4 5 6 7 8 9 1
 """
 f2=open("text.txt","r")
 data=f2.read()
